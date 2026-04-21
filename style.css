@@ -595,37 +595,38 @@ p {
 
 @media (max-width: 768px) {
 
-    /* ===============================
-       MOBILE MENU FIX
-    =============================== */
+    /* ===== FINAL MOBILE MENU FIX ===== */
+
+@media (max-width: 768px) {
 
     .navbar {
         display: none;
         position: absolute;
-        top: 90px;
+        top: 85px;
         left: 0;
         width: 100%;
         background: #081120;
         padding: 25px;
-        border-top: 1px solid rgba(255,255,255,0.05);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        z-index: 999;
+        border-top: 1px solid rgba(255,255,255,0.08);
     }
 
     .navbar.active {
-        display: block;
+        display: block !important;
     }
 
     .navbar ul {
+        display: flex;
         flex-direction: column;
         gap: 18px;
     }
 
     .menu-icon {
-        display: block;
-        font-size: 32px;
+        display: block !important;
         cursor: pointer;
+        font-size: 32px;
     }
-
+}
     /* ===============================
        HERO CTA BUTTONS (TOP)
     =============================== */
