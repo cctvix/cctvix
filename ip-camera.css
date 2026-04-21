@@ -1,357 +1,146 @@
 /* =========================================
-   CCTVIX - PREMIUM IP CAMERA PAGE CSS
-   Responsive for Mobile + Tablet + Desktop
+   IP CAMERA PAGE PREMIUM CSS
+   Add at END of style.css
 ========================================= */
-
-/* RESET */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #030814;
-    color: #ffffff;
-    line-height: 1.7;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    width: 100%;
-    display: block;
-    border-radius: 14px;
-}
-
-ul {
-    list-style: none;
-}
-
-section {
-    padding: 80px 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1250px;
-    margin: auto;
-}
-
-h1, h2, h3, h4 {
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 46px;
-    margin-bottom: 18px;
-}
-
-p {
-    color: #c8d2e2;
-    font-size: 16px;
-}
-
-/* HERO SECTION */
 
 .ip-hero {
     padding: 110px 0;
-    background: linear-gradient(rgba(2,7,20,0.75), rgba(2,7,20,0.85)),
-    url("images/ip-camera-banner.jpg") center/cover no-repeat;
-    text-align: center;
+    background:
+        linear-gradient(rgba(2,7,20,0.78), rgba(2,7,20,0.88)),
+        url("images/ip-camera-banner.jpg") center/cover no-repeat;
 }
 
-.ip-hero h1 {
-    font-size: 64px;
-    margin-bottom: 20px;
+.ip-hero h2 {
+    font-size: 68px;
+    max-width: 750px;
+    margin-bottom: 25px;
 }
 
-.ip-hero span {
+.ip-hero h2 span {
     color: #3b82f6;
 }
 
 .ip-hero p {
-    max-width: 850px;
-    margin: auto;
+    max-width: 760px;
     font-size: 20px;
-    margin-bottom: 35px;
-}
-
-/* BUTTONS */
-
-.btn-primary {
-    display: inline-block;
-    padding: 16px 34px;
-    border-radius: 50px;
-    background: linear-gradient(to right, #2563eb, #3b82f6);
-    color: white;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    transform: translateY(-4px);
-}
-
-/* SECTION TITLE */
-
-.section-tag {
-    color: #60a5fa;
-    letter-spacing: 3px;
-    font-size: 14px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.section-desc {
-    max-width: 800px;
+    line-height: 1.8;
     margin-bottom: 40px;
-    font-size: 17px;
+    color: #c8d2e2;
 }
 
-/* PRODUCT SLIDER SECTION */
+/* ================= PRODUCT SECTION ================= */
 
-.product-section {
+.ip-product-section {
+    padding: 90px 0;
     background: #050d1d;
 }
 
-.product-block {
-    margin-bottom: 70px;
+.ip-product-section h2 {
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.product-block h2 {
-    margin-bottom: 30px;
-}
-
-.product-grid {
+.ip-product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 28px;
 }
 
-.product-card {
+.ip-product-card {
     background: #091224;
     border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 18px;
-    overflow: hidden;
+    border-radius: 22px;
+    padding: 25px;
     transition: 0.3s;
+    text-align: center;
 }
 
-.product-card:hover {
+.ip-product-card:hover {
     transform: translateY(-6px);
 }
 
-.product-info {
-    padding: 20px;
-}
-
-.product-info h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.product-info p {
-    color: #60a5fa;
-    font-weight: 600;
-}
-
-/* USE CASES */
-
-.use-cases {
-    background: #030814;
-}
-
-.use-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
-
-.use-card {
-    background: #091224;
-    padding: 28px;
-    border-radius: 18px;
-    text-align: center;
-}
-
-.use-card h3 {
-    margin-bottom: 10px;
-}
-
-/* INSTALLATION PROCESS */
-
-.installation {
-    background: #050d1d;
-}
-
-.install-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.install-card {
-    background: #091224;
-    padding: 30px;
-    border-radius: 18px;
-}
-
-.install-card h3 {
-    margin-bottom: 12px;
-}
-
-.install-price {
-    margin-top: 35px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    color: #60a5fa;
-}
-
-/* FAQ */
-
-.faq-section {
-    background: #030814;
-}
-
-.faq-item {
-    background: #091224;
-    border-radius: 18px;
-    margin-bottom: 18px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.faq-question {
-    padding: 24px 30px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.faq-question h3 {
-    font-size: 18px;
-}
-
-.faq-answer {
-    padding: 0 30px 24px;
-}
-
-.faq-answer p {
-    font-size: 15px;
-}
-
-/* CTA */
-
-.cta-section {
-    text-align: center;
-    background: linear-gradient(to right, #040b18, #071427);
-    padding: 100px 0;
-}
-
-.cta-section h2 {
+.ip-product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 16px;
     margin-bottom: 20px;
 }
 
-.cta-section p {
-    margin-bottom: 35px;
+.ip-product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
+.ip-product-card p {
+    color: #60a5fa;
+    font-weight: 600;
+    font-size: 16px;
 }
 
-/* CUSTOMER REVIEWS */
+/* ================= USE CASES ================= */
 
-.review-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+.ip-use-section {
+    padding: 90px 0;
+    background: #030814;
 }
 
-.review-card {
-    background: #091224;
-    padding: 30px;
-    border-radius: 18px;
+/* ================= INSTALLATION ================= */
+
+.ip-install-section {
+    padding: 90px 0;
+    background: #050d1d;
 }
 
-.review-card h4 {
-    margin-top: 18px;
+.ip-install-section h2 {
+    margin-bottom: 40px;
 }
 
-/* FOOTER SPACE */
+/* ================= FAQ ================= */
 
-.footer-space {
-    padding-bottom: 50px;
+.ip-faq-section {
+    padding: 90px 0;
 }
 
-/* RESPONSIVE */
+/* ================= RATING ================= */
+
+.ip-rating-section {
+    padding: 90px 0;
+    background: #050d1d;
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 992px) {
 
-    .product-grid,
-    .use-grid,
-    .install-grid,
-    .review-grid {
-        grid-template-columns: 1fr 1fr;
+    .ip-product-grid {
+        grid-template-columns: 1fr;
     }
 
-    .ip-hero h1 {
+    .ip-hero h2 {
         font-size: 48px;
-    }
-
-    h2 {
-        font-size: 38px;
     }
 }
 
 @media (max-width: 768px) {
 
-    section {
-        padding: 70px 0;
-    }
-
-    .product-grid,
-    .use-grid,
-    .install-grid,
-    .review-grid {
-        grid-template-columns: 1fr;
-    }
-
     .ip-hero {
         padding: 90px 0;
     }
 
-    .ip-hero h1 {
-        font-size: 36px;
+    .ip-hero h2 {
+        font-size: 38px;
     }
 
     .ip-hero p {
         font-size: 16px;
     }
 
-    h2 {
-        font-size: 30px;
+    .ip-product-card img {
+        height: 200px;
     }
 
-    .faq-question {
+    .ip-product-card {
         padding: 20px;
-    }
-
-    .faq-answer {
-        padding: 0 20px 20px;
-    }
-
-    .btn-primary {
-        width: 100%;
-        text-align: center;
     }
 }
