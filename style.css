@@ -173,11 +173,13 @@ p {
 .btn-primary:hover {
     transform: translateY(-4px);
 }
-
-.btn-outline {
-   background: linear-gradient(to right, #16a34a, #22c55e);
+.btn-primary {
+    background: linear-gradient(to right, #16a34a, #22c55e);
     color: white;
-    background: transparent;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
 }
 
 .btn-instagram {
