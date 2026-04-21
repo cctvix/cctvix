@@ -680,3 +680,150 @@ p {
         font-size: 34px;
     }
 }
+
+/* =========================================
+   IP CAMERA PAGE PREMIUM CSS
+   Add at END of style.css
+========================================= */
+
+.ip-hero {
+    padding: 110px 0;
+    background:
+        linear-gradient(rgba(2,7,20,0.78), rgba(2,7,20,0.88)),
+        url("images/ip-camera-banner.jpg") center/cover no-repeat;
+}
+
+.ip-hero h2 {
+    font-size: 68px;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+.ip-hero h2 span {
+    color: #3b82f6;
+}
+
+.ip-hero p {
+    max-width: 760px;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #c8d2e2;
+}
+
+/* ================= PRODUCT SECTION ================= */
+
+.ip-product-section {
+    padding: 90px 0;
+    background: #050d1d;
+}
+
+.ip-product-section h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.ip-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.ip-product-card {
+    background: #091224;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 22px;
+    padding: 25px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.ip-product-card:hover {
+    transform: translateY(-6px);
+}
+
+.ip-product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.ip-product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ip-product-card p {
+    color: #60a5fa;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* ================= USE CASES ================= */
+
+.ip-use-section {
+    padding: 90px 0;
+    background: #030814;
+}
+
+/* ================= INSTALLATION ================= */
+
+.ip-install-section {
+    padding: 90px 0;
+    background: #050d1d;
+}
+
+.ip-install-section h2 {
+    margin-bottom: 40px;
+}
+
+/* ================= FAQ ================= */
+
+.ip-faq-section {
+    padding: 90px 0;
+}
+
+/* ================= RATING ================= */
+
+.ip-rating-section {
+    padding: 90px 0;
+    background: #050d1d;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 992px) {
+
+    .ip-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ip-hero h2 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ip-hero {
+        padding: 90px 0;
+    }
+
+    .ip-hero h2 {
+        font-size: 38px;
+    }
+
+    .ip-hero p {
+        font-size: 16px;
+    }
+
+    .ip-product-card img {
+        height: 200px;
+    }
+
+    .ip-product-card {
+        padding: 20px;
+    }
+}
