@@ -173,12 +173,12 @@ p {
 .btn-primary:hover {
     transform: translateY(-4px);
 }
-.btn-primary {
+.btn-outline {
     background: linear-gradient(to right, #16a34a, #22c55e);
     color: white;
 }
 
-.btn-primary:hover {
+.btn-outline:hover {
     transform: translateY(-4px);
 }
 
