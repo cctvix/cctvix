@@ -588,14 +588,9 @@ p {
         grid-template-columns: 1fr;
     }
 
-   /* =========================================
-   MOBILE PREMIUM UPDATE
-   Only Mobile View Improvements
+ /* =========================================
+   FINAL MOBILE MENU + MOBILE FIX
 ========================================= */
-
-@media (max-width: 768px) {
-
-    /* ===== FINAL MOBILE MENU FIX ===== */
 
 @media (max-width: 768px) {
 
@@ -623,18 +618,15 @@ p {
 
     .menu-icon {
         display: block !important;
-        cursor: pointer;
         font-size: 32px;
+        cursor: pointer;
     }
-}
-    /* ===============================
-       HERO CTA BUTTONS (TOP)
-    =============================== */
 
     .hero-buttons {
         justify-content: flex-start;
         align-items: flex-start;
         gap: 14px;
+        flex-direction: column;
     }
 
     .hero .btn-primary,
@@ -647,14 +639,10 @@ p {
         text-align: center;
     }
 
-    /* ===============================
-       BOTTOM CTA BUTTONS
-    =============================== */
-
     .cta-buttons {
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         gap: 14px;
     }
 
@@ -668,10 +656,6 @@ p {
         text-align: center;
     }
 
-    /* ===============================
-       CATEGORY IMAGES SUPPORT
-    =============================== */
-
     .category-card img {
         width: 100%;
         border-radius: 14px;
@@ -679,12 +663,7 @@ p {
         object-fit: cover;
     }
 
-    /* ===============================
-       FOOTER MOBILE LAYOUT
-    =============================== */
-
     .footer-grid {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
@@ -696,16 +675,6 @@ p {
     .footer-grid > div:last-child {
         grid-column: span 2;
     }
-
-    .footer h3 {
-        margin-bottom: 14px;
-    }
-
-    .footer a,
-    .footer p {
-        font-size: 14px;
-    }
-}
 
     h2 {
         font-size: 34px;
