@@ -133,3 +133,15 @@ console.log(
     "%cCCTVIX | Your Safety, Our Mission",
     "color:#3b82f6; font-size:16px; font-weight:bold;"
 );
+/* =========================================
+   MOBILE MENU FIX ONLY
+========================================= */
+
+const menuBtn = document.querySelector(".menu-icon");
+const mobileNavbar = document.querySelector(".navbar");
+
+if (menuBtn && mobileNavbar) {
+    menuBtn.addEventListener("click", () => {
+        mobileNavbar.classList.toggle("active");
+    });
+}
