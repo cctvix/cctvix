@@ -1,7 +1,8 @@
 /* ==================================================
-   CCTVIX - Exact Premium Matching JavaScript
-   Professional Business Website Script
+   CCTVIX - Final Exact Premium script.js
+   FAQ Accordion + Mobile Menu + Premium Effects
 ================================================== */
+
 
 /* ===============================
    MOBILE MENU TOGGLE
@@ -10,9 +11,11 @@
 const menuIcon = document.querySelector(".menu-icon");
 const navbar = document.querySelector(".navbar");
 
-menuIcon.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-});
+if (menuIcon && navbar) {
+    menuIcon.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+    });
+}
 
 
 /* ===============================
@@ -22,44 +25,37 @@ menuIcon.addEventListener("click", () => {
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        header.style.boxShadow = "0 10px 30px rgba(0,0,0,0.25)";
-    } else {
-        header.style.boxShadow = "none";
+    if (header) {
+        if (window.scrollY > 50) {
+            header.style.boxShadow = "0 10px 30px rgba(0,0,0,0.25)";
+        } else {
+            header.style.boxShadow = "none";
+        }
     }
 });
 
 
 /* ===============================
-   SMOOTH SCROLL FOR INTERNAL LINKS
+   FAQ ACCORDION TOGGLE
 =============================== */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-    });
-});
-
-
-/* ===============================
-   FAQ SIMPLE INTERACTION
-=============================== */
-
-const faqItems = document.querySelectorAll(".faq-box");
+const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach(item => {
-    item.addEventListener("click", () => {
-        item.classList.toggle("faq-active");
-    });
+    const question = item.querySelector(".faq-question");
+
+    if (question) {
+        question.addEventListener("click", () => {
+
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                }
+            });
+
+            item.classList.toggle("active");
+        });
+    }
 });
 
 
@@ -68,7 +64,7 @@ faqItems.forEach(item => {
 =============================== */
 
 const fadeElements = document.querySelectorAll(
-    ".why-card, .category-card, .service-card, .testimonial-card, .faq-box"
+    ".why-card, .category-card, .service-card, .testimonial-card, .faq-item"
 );
 
 const observer = new IntersectionObserver((entries) => {
@@ -91,11 +87,11 @@ fadeElements.forEach(el => {
 
 
 /* ===============================
-   BUTTON HOVER MICRO EFFECT
+   BUTTON MICRO HOVER EFFECT
 =============================== */
 
 const buttons = document.querySelectorAll(
-    ".btn-primary, .btn-outline, .btn-instagram"
+    ".btn-primary, .btn-outline, .btn-instagram, .btn-whatsapp"
 );
 
 buttons.forEach(button => {
@@ -110,7 +106,7 @@ buttons.forEach(button => {
 
 
 /* ===============================
-   ACTIVE NAVIGATION HIGHLIGHT
+   ACTIVE NAVIGATION LINK
 =============================== */
 
 const currentPage = window.location.pathname.split("/").pop();
@@ -119,7 +115,10 @@ const navLinks = document.querySelectorAll(".navbar a");
 navLinks.forEach(link => {
     const linkPage = link.getAttribute("href");
 
-    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+    if (
+        linkPage === currentPage ||
+        (currentPage === "" && linkPage === "index.html")
+    ) {
         link.style.color = "#3b82f6";
         link.style.fontWeight = "600";
     }
