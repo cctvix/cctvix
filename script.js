@@ -138,11 +138,3 @@ console.log(
    MOBILE MENU FIX ONLY
 ========================================= */
 
-const menuBtn = document.querySelector(".menu-icon");
-const mobileNavbar = document.querySelector(".navbar");
-
-if (menuBtn && mobileNavbar) {
-    menuBtn.addEventListener("click", () => {
-        mobileNavbar.classList.toggle("active");
-    });
-}
